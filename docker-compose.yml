@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=hamza
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=forex
+    ports:
+      - '5432:5432'
+    volumes:
+      - .:/clustered-data-warehouse
+
+  spring-app:
+    build:
+      context: .
+
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db
+    environment:
+      - spring.datasource.url=jdbc:postgresql://db:5432/forex
+      - spring.datasource.username=hamza
+      - spring.datasource.password=123456
+
+volumes:
+  postgres-data:
