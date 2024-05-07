@@ -5,12 +5,6 @@
 
 Our project involves developing a data warehouse for Bloomberg to analyze FX deals. As part of our Scrum team, one of our key customer stories is to accept deal details and persist them into a database.
 
-## Objectives
-
-- Develop a data warehouse system capable of handling FX deal transactions.
-- Provide a user-friendly interface for accepting deal details.
-- Ensure seamless integration with Bloomberg's existing systems.
-- Persist deal data accurately and securely into the database.
 ## Technology Stack
 
 - **Spring Boot**: Version 2.7.13
